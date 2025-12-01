@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proyectos del Curso</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+    }
+
+    /* Botón menú */
+    .menu-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 26px;
+      background: #1e88e5;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 200;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Sidebar completo */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -285px;
+      width: 260px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 2px 0 8px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: left 0.35s ease;
+      z-index: 300;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      text-decoration: none;
+      background: #eef3ff;
+      border-radius: 8px;
+      color: #222;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .sidebar a:hover {
+      background: #dce6ff;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 250;
+    }
+    .overlay.show {
+      display: block;
+    }
+
+    /* Contenedor principal */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      padding-top: 80px;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    /* Tarjetas de proyectos */
+    .project-card {
+      background: white;
+      padding: 16px;
+      border-radius: 10px;
+      margin: 18px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.07);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .project-title {
+      font-size: 18px;
+      font-weight: bold;
+    }
+
+    .btn-open {
+      background: #1e88e5;
+      padding: 10px 18px;
+      border-radius: 6px;
+      color: white;
+      text-decoration: none;
+      font-size: 15px;
+    }
+
+    .btn-open:hover {
+      background: #166fbe;
+    }
+
+    .note {
+      margin-top: 25px;
+      font-size: 14px;
+      color: #555;
+      text-align: center;
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Botón menú -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <h2>Secciones</h2>
+    <a href="../index.html">Inicio</a>
+    <a href="intro.html">Introducción</a>
+    <a href="algorit.html">Algoritmos</a>
+    <a href="program.html">Programación</a>
+    <a href="maqui-red.html">Infraestructura y Redes</a>
+    <a href="bd.html">Bases de Datos</a>
+    <a href="proyect.html">Proyectos</a>
+    <a href="conclu.html">Conclusión</a>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Contenido -->
+  <main class="container">
+    <h1>Proyectos desarrollados durante el curso</h1>
+
+    <p style="text-align:center; max-width:800px; margin:auto;">
+      A continuación se presentan los trabajos, investigaciones y actividades realizadas a lo largo del curso.
+      Cada archivo contiene el desarrollo teórico, ejercicios prácticos y evidencia del proceso.
+    </p>
+
+    <!-- Lista de proyectos -->
+    <div class="project-card">
+      <span class="project-title">1. Investigación I</span>
+      <a class="btn-open" href="../Archivos/Inv_1.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">2. Laboratorio Práctico I</span>
+      <a class="btn-open" href="../Archivos/Lab_1.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">3. Ejercicio Práctico I</span>
+      <a class="btn-open" href="../Archivos/Ej_1.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">4. Examen Parcial I</span>
+      <a class="btn-open" href="../Archivos/Parcial_1.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">5. Investigación II</span>
+      <a class="btn-open" href="../Archivos/Inv_2.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">6. Ejercicio Práctico II</span>
+      <a class="btn-open" href="../Archivos/Ej_2.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">7. Taller Práctico I</span>
+      <a class="btn-open" href="../Archivos/TP_1.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">8. Examen Parcial II</span>
+      <a class="btn-open" href="../Archivos/Parcial_2.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">9. Portafolio</span>
+      <a class="btn-open" href="../Archivos/Portafolio.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <div class="project-card">
+      <span class="project-title">10. Examen Final (Proyecto)</span>
+      <a class="btn-open" href="../Archivos/Examen.pdf" target="_blank">Abrir</a>
+    </div>
+
+    <p class="note">
+      Nota: Puedes reemplazar cada archivo con un PDF, imagen o cualquier recurso que subas a tu repositorio.
+    </p>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("open");
+      document.getElementById("overlay").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

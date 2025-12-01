@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Programación - Portafolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* Botón menú */
+    .menu-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 26px;
+      background: #1e88e5;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 200;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      user-select: none;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -285px;
+      width: 260px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: left 0.35s ease;
+      z-index: 300;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      text-decoration: none;
+      background: #eef3ff;
+      border-radius: 8px;
+      color: #222;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .sidebar a:hover {
+      background: #dce6ff;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 250;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    /* Contenido */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      padding-top: 80px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .header-img,
+    .content-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Botón del menú -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <h2>Secciones</h2>
+    <a href="../index.html">Inicio</a>
+    <a href="intro.html">Introducción</a>
+    <a href="algorit.html">Algoritmos</a>
+    <a href="program.html">Programación</a>
+    <a href="maqui-red.html">Máquinas y redes virtuales</a>
+    <a href="bd.html">Bases de Datos</a>
+    <a href="proyect.html">Proyectos</a>
+    <a href="conclu.html">Conclusión</a>
+  </div>
+
+  <!-- Overlay -->
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Contenido principal -->
+  <main class="container">
+    <h1>Programación</h1>
+
+    <!-- Imagen superior -->
+    <img src="../Imagenes/Programacion.jpg" alt="Imagen de programación" class="header-img">
+
+    <section class="card">
+      <h2>Fundamentos de la Programación</h2>
+
+      <!-- Imagen añadida -->
+      <img src="../Imagenes/Fundamento_pro.jpg" alt="Fundamentos de la programación" class="content-img">
+
+      <p>
+        En esta sección se exploran los conceptos esenciales de la programación, desde la sintaxis 
+        básica hasta la construcción de programas funcionales. A través del curso aprendí cómo 
+        transformar ideas lógicas en instrucciones que la computadora pueda ejecutar.
+      </p>
+
+      <p>
+        La programación implica combinar estructuras como variables, operadores, condicionales y 
+        ciclos para crear soluciones completas. Estas herramientas permiten controlar el flujo de 
+        un programa y dar respuesta a diferentes casos o escenarios.
+      </p>
+
+      <h3>Lenguajes Utilizados</h3>
+
+      <!-- Imagen añadida -->
+      <img src="../Imagenes/C_Python.jpg" alt="Lenguajes de programación" class="content-img">
+
+      <p>Durante el curso se trabajó con dos lenguajes principales:</p>
+
+      <ul>
+        <li><b>C:</b> utilizado para comprender cómo funcionan las instrucciones a un nivel más cercano al hardware.</li>
+        <li><b>Python:</b> ideal para aplicar lógica de forma sencilla y desarrollar programas más rápido.</li>
+      </ul>
+
+      <p>
+        Cada lenguaje permitió desarrollar diferentes habilidades: C fortalece el análisis de memoria 
+        y estructura, mientras que Python facilita la resolución de problemas y la lectura del código.
+      </p>
+
+      <h3>Aplicaciones Prácticas</h3>
+
+      <!-- Imagen añadida -->
+      <img src="../Imagenes/Areas.jpg" alt="Aplicaciones prácticas de programación" class="content-img">
+
+      <p>
+        Entre los ejercicios desarrollados se incluyen programas que utilizan ciclos, manejo de datos, 
+        estructuras de control e incluso algoritmos de búsqueda o toma de decisiones. Estos proyectos 
+        ayudaron a reforzar la lógica y el pensamiento computacional.
+      </p>
+
+      <p>
+        La programación es una habilidad fundamental que sirve como base para comprender temas más 
+        avanzados como redes, bases de datos y desarrollo de software en general.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("open");
+      document.getElementById("overlay").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

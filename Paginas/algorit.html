@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Algoritmos - Portafolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* Botón menú */
+    .menu-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 26px;
+      background: #1e88e5;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 200;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+      user-select: none;
+    }
+
+    /* Sidebar */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -285px;
+      width: 260px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: left 0.35s ease;
+      z-index: 300;
+    }
+
+    .sidebar.open {
+      left: 0;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      text-decoration: none;
+      background: #eef3ff;
+      border-radius: 8px;
+      color: #222;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .sidebar a:hover {
+      background: #dce6ff;
+    }
+
+    /* Overlay */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 250;
+    }
+
+    .overlay.show {
+      display: block;
+    }
+
+    /* Contenido */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      padding-top: 80px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .header-img,
+    .img-box img {
+      width: 100%;
+      border-radius: 10px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Botón de menú -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <h2>Secciones</h2>
+    <a href="../index.html">Inicio</a>
+    <a href="intro.html">Introducción</a>
+    <a href="algorit.html">Algoritmos</a>
+    <a href="program.html">Programación</a>
+    <a href="maqui-red.html">Máquinas y redes locales</a>
+    <a href="bd.html">Bases de Datos</a>
+    <a href="proyect.html">Proyectos</a>
+    <a href="conclu.html">Conclusión</a>
+  </div>
+
+  <!-- Fondo oscuro -->
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <!-- Contenido principal -->
+  <main class="container">
+    <h1>Algoritmos</h1>
+
+    <!-- Imagen portada -->
+    <img src="../Imagenes/Portada_algoritmos.jpg" class="header-img" alt="Portada algoritmos">
+
+    <!-- Sección 1 -->
+    <section class="card">
+      <h2>Algoritmos y Estructuras Básicas</h2>
+
+      <div class="img-box">
+        <img src="../Imagenes/Algoritmo_basico.png" alt="Algoritmos básicos">
+      </div>
+
+      <p>
+        Un algoritmo es un conjunto ordenado de pasos lógicos que permiten resolver un problema. 
+        Estos pasos deben ser precisos, claros, finitos y producir un resultado correcto.
+      </p>
+
+      <p>
+        Las estructuras básicas de un algoritmo son fundamentales para organizar las instrucciones que se deben ejecutar.
+      </p>
+
+      <ul>
+        <li><strong>Secuencia:</strong> instrucciones que se ejecutan una detrás de otra sin saltos.</li>
+        <li><strong>Selección:</strong> permite elegir entre diferentes caminos según una condición.</li>
+        <li><strong>Repetición:</strong> ejecuta una o varias instrucciones varias veces.</li>
+      </ul>
+
+      <p>
+        Estas tres estructuras son la base de cualquier programa o ejercicio desarrollado en el área de algoritmos.
+      </p>
+    </section>
+
+    <!-- Sección 2 -->
+    <section class="card">
+      <h2>Estructuras de Control</h2>
+
+      <div class="img-box">
+        <img src="../Imagenes/estructuras-de-control.jpg" alt="Estructuras de control">
+      </div>
+
+      <p>
+        Las estructuras de control permiten que un algoritmo tome decisiones y modifique su flujo. 
+        Son esenciales para responder a situaciones diferentes dependiendo de los datos de entrada.
+      </p>
+
+      <p>Tipos principales:</p>
+
+      <ul>
+        <li>
+          <strong>Condicional simple:</strong> ejecuta una acción si la condición se cumple.
+        </li>
+
+        <li>
+          <strong>Condicional doble:</strong> permite escoger entre dos caminos posibles.
+        </li>
+
+        <li>
+          <strong>Condicional múltiple:</strong> permite elegir entre varias opciones.
+        </li>
+      </ul>
+
+      <p>
+        Estas estructuras permiten que un algoritmo sea flexible, eficiente y capaz de resolver problemas más complejos.
+      </p>
+    </section>
+
+    <!-- Sección 3 -->
+    <section class="card">
+      <h2>Estructuras Repetitivas</h2>
+
+      <div class="img-box">
+        <img src="../Imagenes/Repetitivas.jpg" alt="Estructuras repetitivas">
+      </div>
+
+      <p>
+        Las estructuras repetitivas permiten ejecutar un conjunto de instrucciones múltiples veces, 
+        ya sea un número específico o mientras se cumpla una condición.
+      </p>
+
+      <p>Tipos de ciclos:</p>
+
+      <ul>
+        <li><strong>Ciclo Mientras (while):</strong> se repite mientras la condición sea verdadera.</li>
+
+        <li><strong>Ciclo Repetir...Hasta (do-while):</strong> siempre se ejecuta al menos una vez.</li>
+
+        <li><strong>Ciclo Para (for):</strong> se usa cuando se conoce el número de repeticiones.</li>
+      </ul>
+
+      <p>
+        Los ciclos son fundamentales en tareas como recorrer listas, validar datos, realizar cálculos y automatizar procesos dentro de un algoritmo.
+      </p>
+    </section>
+
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("open");
+      document.getElementById("overlay").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

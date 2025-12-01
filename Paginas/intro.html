@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Introducción - Portafolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f5f7fb;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    /* Botón menú */
+    .menu-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 26px;
+      background: #1e88e5;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 200;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    /* Sidebar oculto completamente */
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -285px; /* Oculta totalmente */
+      width: 260px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: left 0.35s ease;
+      z-index: 300;
+    }
+
+    .sidebar.open {
+      left: 0; /* Aparece */
+    }
+
+    .sidebar h2 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      text-decoration: none;
+      background: #eef3ff;
+      border-radius: 8px;
+      color: #222;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .sidebar a:hover {
+      background: #dce6ff;
+    }
+
+    /* Fondo oscuro */
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 250;
+    }
+    .overlay.show {
+      display: block;
+    }
+
+    /* Contenido */
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      padding-top: 80px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .header-img {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+
+</head>
+<body>
+
+  <!-- Botón del menú -->
+  <div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+  <!-- Sidebar -->
+  <div id="sidebar" class="sidebar">
+    <h2>Secciones</h2>
+    <a href="../index.html">Inicio</a>
+    <a href="intro.html">Introducción</a>
+    <a href="algorit.html">Algoritmos</a>
+    <a href="program.html">Programación</a>
+    <a href="maqui-red.html">Maquinas y redes locales</a>
+    <a href="bd.html">Bases de Datos</a>
+    <a href="proyect.html">Proyectos</a>
+    <a href="conclu.html">Conclusión</a>
+  </div>
+
+  <div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+  <main class="container">
+    <h1>Introducción</h1>
+    
+    <img src="../Imagenes/Img_1.png" alt="Imagen portada introducción" class="header-img">
+
+    <section class="card">
+      <h2>Bienvenidos al Portafolio</h2>
+
+      <p>
+        Este portafolio reúne todos los contenidos estudiados durante el curso de
+        <b>Desarrollo Lógico y Algoritmos</b>. A lo largo del periodo se exploraron
+        conceptos esenciales que permiten comprender cómo se diseñan y estructuran
+        soluciones computacionales, desde la lógica básica hasta temas más avanzados
+        relacionados con máquinas virtuales, redes y bases de datos.
+      </p>
+
+      <p>
+        El objetivo de este sitio es presentar de forma clara y organizada los aprendizajes
+        más importantes desarrollados durante el curso, así como servir como referencia
+        para futuros proyectos, tareas o estudios relacionados con la programación
+        y los sistemas informáticos.
+      </p>
+
+      <h3>Contenido del Portafolio</h3>
+      <p>Dentro de este portafolio se encuentran las siguientes áreas de estudio:</p>
+
+      <ul>
+        <li>Conceptos fundamentales de algoritmos y estructuras de control.</li>
+        <li>Programación en lenguajes como C y Python.</li>
+        <li>Uso y configuración de máquinas virtuales.</li>
+        <li>Introducción a protocolos de comunicación como FTP.</li>
+        <li>Configuración inicial de dispositivos Cisco.</li>
+        <li>Conceptos básicos de SQL y replicación de bases de datos.</li>
+        <li>Proyectos aplicados desarrollados por el estudiante.</li>
+      </ul>
+
+      <p>
+        Este portafolio refleja tanto el progreso académico como el esfuerzo y dedicación
+        puestos en el aprendizaje de cada uno de los temas. También representa la importancia
+        del pensamiento lógico y la resolución de problemas dentro del mundo tecnológico actual.
+      </p>
+    </section>
+  </main>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("sidebar").classList.toggle("open");
+      document.getElementById("overlay").classList.toggle("show");
+    }
+  </script>
+
+</body>
+</html>

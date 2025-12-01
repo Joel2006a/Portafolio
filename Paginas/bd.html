@@ -1,0 +1,249 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bases de Datos - Portafolio</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f5f7fb;
+      color: #222;
+      overflow-x: hidden;
+    }
+
+    .menu-btn {
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      font-size: 26px;
+      background: #1e88e5;
+      color: white;
+      width: 45px;
+      height: 45px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 200;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      left: -285px;
+      width: 260px;
+      height: 100%;
+      background: #ffffff;
+      box-shadow: 2px 0 10px rgba(0,0,0,0.2);
+      padding: 20px;
+      transition: left 0.35s ease;
+      z-index: 300;
+    }
+
+    .sidebar.open { left: 0; }
+
+    .sidebar h2 { margin-top: 0; font-size: 22px; }
+
+    .sidebar a {
+      display: block;
+      padding: 10px;
+      margin: 5px 0;
+      text-decoration: none;
+      background: #eef3ff;
+      border-radius: 8px;
+      color: #222;
+      border: 1px solid rgba(0,0,0,0.1);
+    }
+
+    .sidebar a:hover { background: #dce6ff; }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.4);
+      display: none;
+      z-index: 250;
+    }
+
+    .overlay.show { display: block; }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 40px 20px;
+      padding-top: 80px;
+    }
+
+    .card {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+      margin-top: 20px;
+      line-height: 1.6;
+    }
+
+    .header-img,
+    .img-section {
+      width: 100%;
+      border-radius: 12px;
+      margin-top: 10px;
+      box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="menu-btn" onclick="toggleMenu()">☰</div>
+
+<div id="sidebar" class="sidebar">
+  <h2>Secciones</h2>
+  <a href="../index.html">Inicio</a>
+  <a href="intro.html">Introducción</a>
+  <a href="algorit.html">Algoritmos</a>
+  <a href="program.html">Programación</a>
+  <a href="maqui-red.html">Maquinas y redes locales</a>
+  <a href="bd.html">Bases de Datos</a>
+  <a href="proyect.html">Proyectos</a>
+  <a href="conclu.html">Conclusión</a>
+</div>
+
+<div id="overlay" class="overlay" onclick="toggleMenu()"></div>
+
+<main class="container">
+  <h1>Bases de Datos</h1>
+
+  <!-- Imagen principal -->
+  <img src="../Imagenes/DB.jpg" class="header-img" alt="Imagen bases de datos">
+
+  <!-- SECCIÓN 1 -->
+  <section class="card">
+    <h2>¿Qué es una Base de Datos?</h2>
+
+    <img src="../Imagenes/Que_BD.jpg" class="img-section" alt="Concepto de base de datos">
+
+    <p>
+      Una base de datos es un conjunto de información organizada y estructurada para poder ser consultada,
+      administrada y actualizada de forma eficiente. Su objetivo es almacenar datos de manera ordenada
+      y mantenerlos disponibles para cualquier aplicación o usuario que los necesite.
+    </p>
+
+    <p>
+      El uso de bases de datos es fundamental hoy en día, ya que casi todos los sistemas informáticos 
+      dependen del almacenamiento de información, desde redes sociales hasta bancos, tiendas en línea 
+      y aplicaciones móviles.
+    </p>
+  </section>
+
+  <!-- SECCIÓN 2 -->
+  <section class="card">
+    <h2>Tipos de Bases de Datos</h2>
+
+    <img src="../Imagenes/Tipos_BD.jpeg" class="img-section" alt="Tipos de bases de datos">
+
+    <ul>
+      <li><strong>Relacionales (SQL):</strong> almacenan datos en tablas y usan lenguaje SQL. Ej.: MySQL, MariaDB, PostgreSQL.</li>
+      <li><strong>No Relacionales (NoSQL):</strong> se usan para datos más flexibles. Ej.: MongoDB, Firebase.</li>
+      <li><strong>Orientadas a grafos:</strong> permiten representar relaciones complejas. Ej.: Neo4j.</li>
+      <li><strong>Embebidas o locales:</strong> livianas y utilizadas en apps móviles. Ej.: SQLite.</li>
+      <li><strong>En la nube:</strong> almacenadas en servidores remotos. Ej.: Amazon RDS, Google Cloud SQL.</li>
+    </ul>
+
+    <p>
+      Cada tipo se utiliza dependiendo de las necesidades del proyecto: estructura de datos,
+      velocidad, escalabilidad y volumen de información.
+    </p>
+  </section>
+
+  <!-- SECCIÓN 3 -->
+  <section class="card">
+    <h2>Modelos de Bases de Datos</h2>
+
+    <img src="../Imagenes/Modelos_BD.png" class="img-section" alt="Modelos de base de datos">
+
+    <p>Los modelos más utilizados son:</p>
+
+    <ul>
+      <li><strong>Modelo relacional:</strong> organiza la información en tablas.</li>
+      <li><strong>Modelo jerárquico:</strong> estructura los datos como un árbol.</li>
+      <li><strong>Modelo de red:</strong> permite múltiples relaciones entre nodos.</li>
+      <li><strong>Modelo orientado a objetos:</strong> ideal para datos complejos.</li>
+    </ul>
+
+    <p>
+      Estos modelos definen cómo se organiza la información, cómo se accede a ella
+      y cómo se relacionan los diferentes elementos.
+    </p>
+  </section>
+
+  <!-- SECCIÓN 4 -->
+  <section class="card">
+    <h2>¿Qué es SQL?</h2>
+
+    <img src="../Imagenes/SQL.png" class="img-section" alt="SQL consulta">
+
+    <p>
+      SQL (Structured Query Language) es un lenguaje utilizado para gestionar y consultar datos
+      dentro de bases de datos relacionales. Permite realizar acciones como:
+    </p>
+
+    <ul>
+      <li>Crear tablas</li>
+      <li>Insertar registros</li>
+      <li>Actualizar información</li>
+      <li>Eliminar registros</li>
+      <li>Realizar consultas avanzadas</li>
+    </ul>
+
+    <p>
+      Es uno de los lenguajes más importantes para cualquier programador, ya que la mayoría
+      de las aplicaciones utilizan bases de datos SQL.
+    </p>
+  </section>
+
+  <!-- SECCIÓN 5 -->
+  <section class="card">
+    <h2>Aplicaciones de las Bases de Datos</h2>
+
+    <img src="../Imagenes/Aplicaciones_BD.png" class="img-section" alt="Aplicaciones de bases de datos">
+
+    <p>
+      Las bases de datos se utilizan en prácticamente todos los sectores:
+    </p>
+
+    <ul>
+      <li>Sistemas bancarios y transacciones</li>
+      <li>Redes sociales</li>
+      <li>Tiendas en línea</li>
+      <li>Hospitales y registros médicos</li>
+      <li>Sistemas educativos</li>
+      <li>Aplicaciones móviles</li>
+      <li>Empresas y gestión administrativa</li>
+    </ul>
+
+    <p>
+      Sin bases de datos, sería imposible almacenar y organizar la enorme cantidad
+      de información que manejan los sistemas modernos.
+    </p>
+  </section>
+
+</main>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("sidebar").classList.toggle("open");
+    document.getElementById("overlay").classList.toggle("show");
+  }
+</script>
+
+</body>
+</html>
