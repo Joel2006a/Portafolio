@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Portafolio de Desarrollo Lógico y Algoritmo</title>
+  <style>
+    :root{
+      --bg:#f6f8fb;
+      --card:#ffffff;
+      --accent:#1e88e5;
+      --muted:#6b7280;
+      --shadow: 0 6px 18px rgba(32,33,36,0.08);
+      font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,var(--bg),#ffffff);color:#111827}
+    .container{
+      max-width:900px;margin:36px auto;padding:28px;
+    }
+    header{
+      display:flex;align-items:center;gap:18px;margin-bottom:18px;
+    }
+    .brand{
+      background:linear-gradient(135deg,var(--accent),#6fb3ff);
+      width:64px;height:64px;border-radius:12px;display:flex;align-items:center;justify-content:center;color:white;font-weight:700;
+      box-shadow:var(--shadow);
+      font-size:18px;
+    }
+    h1{margin:0;font-size:22px}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+    .card{
+      background:var(--card);border-radius:12px;padding:18px;margin-top:18px;box-shadow:var(--shadow);
+    }
+    .meta{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:8px;color:var(--muted)}
+    nav ul{list-style:none;padding:0;margin:12px 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:10px}
+    nav a{
+      display:block;padding:12px 14px;background:#fbfdff;border-radius:10px;text-decoration:none;color:#0f172a;border:1px solid rgba(17,24,39,0.04);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    nav a:hover{transform:translateY(-4px);box-shadow:0 8px 20px rgba(30,40,60,0.08)}
+    footer{margin-top:18px;color:var(--muted);font-size:14px;text-align:center}
+    @media (max-width:420px){
+      .brand{width:52px;height:52px;font-size:16px}
+    }
+  </style>
+</head>
+<body>
+  <main class="container" role="main">
+    <header>
+      <div class="brand" aria-hidden="true">PJ</div>
+      <div>
+        <h1>Portafolio</h1>
+        <p class="lead">Desarrollo Lógico y Algoritmo</p>
+      </div>
+    </header>
+
+    <section class="card" aria-labelledby="about-title">
+      <h2 id="about-title" style="font-size:16px;margin:0 0 8px">Datos</h2>
+      <div class="meta">
+        <div><strong>Nombre:</strong> Arvin Guerra</div>
+        <div><strong>Cédula:</strong> 4-836-808</div>
+      </div>
+
+      <p style="margin-top:6px;color:var(--muted)">A continuación, se presentan los temas y actividades desarrolladas durante el curso. Selecione cualquier tema, haciendo clic, para ver el contenido detallado.</p>
+
+      <nav aria-label="Temas vistos durante el curso">
+        <ul>
+          <li><a href="Paginas/intro.html">1. Introducción</a></li>
+          <li><a href="Paginas/algorit.html">2. Algoritmos y estructura básica</a></li>
+          <li><a href="Paginas/program.html">3. Programación</a></li>
+          <li><a href="Paginas/maqui-red.html">4. Máquinas y redes locales</a></li>
+          <li><a href="Paginas/bd.html">5. Bases de datos</a></li>
+          <li><a href="Paginas/proyect.html">Proyectos del Curso</a></li>
+          <li><a href="Paginas/conclu.html">Conclusión</a></li>
+        </ul>
+      </nav>
+    </section>
+    <footer>
+      © 2025 - Universidad Tecnológica de Panamá
+    </footer>
+  </main>
+</body>
+</html><!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Título de la página</title>
+</head>
+<body>
+    
+</body>
+</html>
